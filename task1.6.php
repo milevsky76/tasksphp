@@ -1,5 +1,21 @@
 <?php //6. Получить  все  четырехзначные  числа,  в  записи  которых  встречаются только цифры 0,2,3,7.
 
+function getSpecificFourDigitNumbers(array $specificNumbers = null): array
+{
+    $specificNumbers = $specificNumbers ?: [0, 2, 3, 7];
+    $specificFourDigitNumbers = [];
+    define("LIMIT_FROM", 1000, false);
+    define("LIMIT_TO", 9999, false);
+
+    for ($i = LIMIT_FROM; $i <= LIMIT_TO ; $i++) {
+        if(isSpecific($i, $specificNumbers)) {
+            $specificFourDigitNumbers[] = $i;
+        }
+    }
+    
+    return $specificFourDigitNumbers;
+}
+
 function isSpecific(int $number, array $specificNumbers): bool
 {
     for ($j = 0; $j < 4; $j++) { 

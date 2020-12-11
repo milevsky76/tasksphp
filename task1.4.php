@@ -1,5 +1,26 @@
 <?php //4. Найти все четные четырехзначные числа, цифры которых следуют в порядке возрастания или убывания.
 
+function getEvenFourDigitAscDescValues(): array
+{
+    $evenFourDigitAscDecValues = [];
+    define("LIMIT_FROM", 1000, false);
+    define("LIMIT_TO", 9999, false);
+
+    for ($i = LIMIT_FROM; $i <= LIMIT_TO ; $i++) {
+        if(isEven($i)) {
+            if(isDecreasingSequence($i)) {
+                $evenFourDigitAscDecValues[] = $i;
+                continue;
+            }else if(isAscendingSequence($i)) {
+                $evenFourDigitAscDecValues[] = $i;
+                continue;
+            }
+        }
+    }
+    
+    return $evenFourDigitAscDecValues;
+}
+
 function isEven(int $number): bool
 {
     return $number % 2 == 0 ? true : false;

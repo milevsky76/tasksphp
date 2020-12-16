@@ -22,12 +22,11 @@ function getValues(int $number): array
 function getSumOfNumber(int $number): int
 {
     $sumOfNumber = 0;
-    
-    for ($i = 0; $i < 4; $i++) { 
+
+    do {
         $sumOfNumber += $number % 10;
         $number = (int)($number / 10);
-        
-    }
+    } while ($number != 0);
 
     return $sumOfNumber;
 }

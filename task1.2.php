@@ -3,11 +3,9 @@
 function getFourDigitValues(int $number): array
 {
     $fourDigitNumbers = [];
-    define("LIMIT_FROM", 1000, false);
-    define("LIMIT_TO", 9999, false);
 
-    if($number >= getSumOfNumber(LIMIT_FROM) && $number <= getSumOfNumber(LIMIT_TO)) {
-        for ($i = LIMIT_FROM; $i <= LIMIT_TO ; $i++) {
+    if($number >= getSumOfNumber(1000) && $number <= getSumOfNumber(9999)) {
+        for ($i = 1000; $i <= 9999 ; $i++) {
             $sumOfNumber = getSumOfNumber($i);
             
             if($sumOfNumber === $number) {

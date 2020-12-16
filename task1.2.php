@@ -2,21 +2,21 @@
 
 function getValues(int $number): array
 {
-    $fourDigitNumbers = [];
+    $values = [];
 
     if($number >= getSumOfNumber(1000) && $number <= getSumOfNumber(9999)) {
         for ($i = 1000; $i <= 9999 ; $i++) {
             $sumOfNumber = getSumOfNumber($i);
             
             if($sumOfNumber === $number) {
-                $fourDigitNumbers[] = $i;
+                $values[] = $i;
             }
         }
         
-        return $fourDigitNumbers;
+        return $values;
     }
     
-    return $fourDigitNumbers;
+    return $values;
 }
 
 function getSumOfNumber(int $number): int

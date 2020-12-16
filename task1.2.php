@@ -1,6 +1,6 @@
 <?php //2. Получить  все  четырехзначные  числа,  сумма  цифр  которых  равна заданному числу  n.
 
-function getFourDigitValues(int $number): array
+function getValues(int $number): array
 {
     $fourDigitNumbers = [];
 

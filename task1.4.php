@@ -48,7 +48,6 @@ function isAscDescSequence(int $naturalNumber): bool
             }
 
             if ($naturalNumber <= 9) {
-                $sequence;
                 break;
             }
         } while ($naturalNumber != 0);

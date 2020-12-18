@@ -4,10 +4,8 @@ function getSpecificFourDigitNumbers(array $specificNumbers = null): array
 {
     $specificNumbers = $specificNumbers ?: [0, 2, 3, 7];
     $specificFourDigitNumbers = [];
-    define("LIMIT_FROM", 1000, false);
-    define("LIMIT_TO", 9999, false);
 
-    for ($i = LIMIT_FROM; $i <= LIMIT_TO ; $i++) {
+    for ($i = 1000; $i <= 9999 ; $i++) {
         if(isSpecific($i, $specificNumbers)) {
             $specificFourDigitNumbers[] = $i;
         }

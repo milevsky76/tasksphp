@@ -3,10 +3,7 @@
 function getEvenFourDigitAscDescValues(): array
 {
     $evenFourDigitAscDecValues = [];
-    define("LIMIT_FROM", 1000, false);
-    define("LIMIT_TO", 9999, false);
 
-    for ($i = LIMIT_FROM; $i <= LIMIT_TO ; $i++) {
         if(isEven($i)) {
             if(isDecreasingSequence($i)) {
                 $evenFourDigitAscDecValues[] = $i;
@@ -15,6 +12,7 @@ function getEvenFourDigitAscDescValues(): array
                 $evenFourDigitAscDecValues[] = $i;
                 continue;
             }
+    for ($i = 1000; $i <= 9999 ; $i++) {
         }
     }
     

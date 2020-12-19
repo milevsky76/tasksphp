@@ -1,17 +1,17 @@
 <?php //8. Получить все четырехзначные целые числа, в записи которых нет одинаковых цифр.
 
-function getFourDigitWithoutIdenticalDigits(): array
+function getWithoutIdenticalDigits(): array
 {
-    $fourDigitWithoutIdenticalDigits = [];
+    $withoutIdenticalDigits = [];
 
     for ($i = 1000; $i <= 9999; $i++) { 
         if(isSameNumbers($i)){
             continue;
         }
-        $fourDigitWithoutIdenticalDigits[] = $i;
+        $withoutIdenticalDigits[] = $i;
     }
 
-    return $fourDigitWithoutIdenticalDigits;
+    return $withoutIdenticalDigits;
 }
 
 function isSameNumbers(int $naturalNumber): bool

@@ -1,5 +1,10 @@
 <?php //10. Найти все меньшие N числа-палиндромы, которые при возведении в квадрат дают палиндром. Число называется палиндромом, если его запись читается одинаково с начала и с конца.
 
+function isPalindrome(int $number1, int $number2):bool
+{
+    return $number1 === $number2 ? true : false;
+}
+
 function getNumberReverse(int $naturalNumber): int
 {
     $numberReverse = 0;
